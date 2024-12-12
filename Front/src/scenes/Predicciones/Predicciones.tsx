@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Predicciones.css';
-import gramaje from '@/assets/img/predicciones/gramaje.svg';
-import temperatura from '@/assets/img/predicciones/temperatura.svg';
-import tiempo from '@/assets/img/predicciones/tiempo.svg';
+import gramaje from '@/assets/img/MONITOREO/gramaje.png';
+import temperatura from '@/assets/img/MONITOREO/temperatura.png';
+import tiempo from '@/assets/img/MONITOREO/tiempo.png';
 
 const Predicciones: React.FC = () => {
   const [selectedMaterial, setSelectedMaterial] = useState('PET');

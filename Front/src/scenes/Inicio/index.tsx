@@ -1,6 +1,6 @@
 import React from 'react';
 import './inicio.css';
-import celular from '@/assets/img/inicio/celular.png';
+import celular from '@/assets/img/PÁGINA PRINCIPAL/celular.png';
 import computadora from '@/assets/img/PÁGINA PRINCIPAL/compu.png';
 import { Link } from 'react-router-dom';
 
