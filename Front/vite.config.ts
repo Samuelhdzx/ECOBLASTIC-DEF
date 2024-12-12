@@ -9,6 +9,7 @@ export default defineConfig({
     host: true,
     strictPort: true
   },
+  assetsInclude: ['**/*.svg', '**/*.png'],
   preview: {
     port: Number(process.env.PORT) || 3000,
     host: true,
