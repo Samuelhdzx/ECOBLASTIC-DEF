@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './Predicciones.css';
-import gramaje from 'front/public/img/MONITOREO/gramaje.png';
-import temperatura from 'front/public/img/MONITOREO/temperatura.png';
-import tiempo from 'front/public/img/MONITOREO/tiempo.png';
-const Predicciones: React.FC = () => {
+import gramaje from '../../assets/images/predicciones/gramaje.svg';
+import temperatura from '../../assets/images/predicciones/temperatura.svg';
+import tiempo from '../../assets/images/predicciones/tiempo.svg';const Predicciones: React.FC = () => {
   const [selectedMaterial, setSelectedMaterial] = useState('PET');
   const [selectedParameter, setSelectedParameter] = useState('gramaje');
 
