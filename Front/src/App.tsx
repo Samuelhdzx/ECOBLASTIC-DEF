@@ -13,7 +13,6 @@ import DataEntryForm from "./Pages/DataEntryForm";
 import Profile from "./Pages/Profile";
 import Manuales from "./Pages/Manuales";
 import AllRecords from "./Pages/AllRecords";
-import { UserRecords } from "./Pages/UserRecors";
 
 import Predicciones from "./scenes/Predicciones/Predicciones";
 

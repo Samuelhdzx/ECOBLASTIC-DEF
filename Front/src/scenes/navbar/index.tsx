@@ -55,14 +55,16 @@ const Navbar = () => {
                 });
     
                 // Error: La condición está invertida
-                // if (response.ok) { ... } lanzaría un error cuando la respuesta es exitosa
-               
-    
-                // Si llegamos aquí, el logout fue exitoso
-                localStorage.removeItem('user');
-                handleMenuClose();
-                window.dispatchEvent(new Event('authChange'));
-                navigate('/login', { replace: true });
+                        if (response.ok) {
+                            localStorage.removeItem('user');
+                            setIsAuthenticated(false);
+                            handleMenuClose();
+                            window.dispatchEvent(new Event('authChange'));
+                            navigate('/login', { replace: true });
+                        } else {
+                            const errorData = await response.json();
+                            throw new Error(errorData.message || 'Error al cerrar sesión');
+                        }
                 
             } catch (error) {
                 console.error('Error durante el logout:', error);
