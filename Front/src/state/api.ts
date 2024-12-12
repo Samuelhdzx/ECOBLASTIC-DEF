@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:1337',
+    baseUrl: 'https://ecoblastic-back.onrender.com',
     credentials: 'include',
     prepareHeaders: (headers) => {
       const token = localStorage.getItem('token');
