@@ -1,7 +1,7 @@
 import React from 'react';
 import './inicio.css';
-import celular from '../../assets/images/inicio/celular.png';
-import computadora from '../../assets/img/PÁGINA PRINCIPAL/compu.png';
+import celular from '@/assets/images/inicio/celular.png';
+import computadora from '@/assets/img/PÁGINA PRINCIPAL/compu.png';
 import { Link } from 'react-router-dom';
 
 const Inicio: React.FC = () => {
