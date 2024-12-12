@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Box, Typography, useTheme, IconButton, Menu, MenuItem, useMediaQuery } from "@mui/material";
 import { Menu as MenuIcon, User, LogOut } from "lucide-react";
 import FlexBetween from "@/components/FlexBetween";
-import logo from "/img/LOGO.png";
+import logo from "@/assets/img/LOGO.png";
 
 type NavItem = {
     path: string;
