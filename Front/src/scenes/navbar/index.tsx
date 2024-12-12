@@ -29,7 +29,7 @@ const Navbar = () => {
     const navItems: NavItem[] = isAuthenticated ? [
         { path: "/predictions", label: "Predicción", id: "predictions" },
         { path: "/dashboard", label: "Dashboard", id: "dashboard" },
-        { path: "/profile", label: "Perfil", id: "profile" },
+        { path: "/profile", label: "Perrfil", id: "profile" },
         { path: "/manuals", label: "Manuales", id: "manuals" },
         // {path : "/registers", label: "Todos los registros", id: "registers" },
     ] : [
