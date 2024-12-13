@@ -49,7 +49,7 @@ const Navbar = () => {
     const handleLogout = async () => {
         if (window.confirm('¿Estás seguro de que deseas cerrar sesión?')) {
             try {
-                const response = await fetch('http://localhost:1337/api/logout', {
+                const response = await fetch('https://ecoblastic-back.onrender.com/api/logout', {
                     method: 'GET',
                     credentials: 'include',
                 });

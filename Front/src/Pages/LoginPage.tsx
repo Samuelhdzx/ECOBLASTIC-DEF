@@ -18,8 +18,7 @@ const LoginPage = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
-        body: JSON.stringify(formData),
-        mode: 'no-cors'
+        body: JSON.stringify(formData)
       });
 
       const data = await res.json();
@@ -27,7 +26,7 @@ const LoginPage = () => {
       if (res.ok) {
         localStorage.setItem('user', JSON.stringify(data));
         navigate('/inicio');
-        window.location.reload(); // Esto forzará la recarga para mostrar el Navbar correcto
+        window.location.reload();
       } else {
         setError(data.message || 'Credenciales inválidas');
       }
