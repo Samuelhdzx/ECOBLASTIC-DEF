@@ -19,7 +19,7 @@ app.use(cors({
     'https://ecoblastic.onrender.com'
     ],
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'HEAD'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'Accept']
 }));app.use(helmet());
 app.use(cookieParser());
