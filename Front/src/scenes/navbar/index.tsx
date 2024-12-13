@@ -52,6 +52,10 @@ const Navbar = () => {
                 const response = await fetch('https://ecoblastic-back.onrender.com/api/logout', {
                     method: 'GET',
                     credentials: 'include',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
                 });
     
                 // Error: La condición está invertida

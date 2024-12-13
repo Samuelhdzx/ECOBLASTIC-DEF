@@ -100,10 +100,6 @@ import Predicciones from "./scenes/Predicciones/Predicciones";
               <Routes>
                 <Route path="/" element={<Navigate to="/login" replace />} />
                     
-                // Add this to your imports
-  import DataEntryForm from '@/components/DataEntryForm';
-
-  // Add this to your protectedRoutes
   <Route path="/data-entry" element={
     <ProtectedLayout>
       <DataEntryForm />
