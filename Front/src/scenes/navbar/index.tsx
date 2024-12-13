@@ -53,26 +53,20 @@ const Navbar = () => {
                     method: 'GET',
                     credentials: 'include',
                     headers: {
-                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
                     }
                 });
-    
-                // Error: La condición está invertida
-                        if (response.ok) {
-                            localStorage.removeItem('user');
-                            setIsAuthenticated(false);
-                            handleMenuClose();
-                            window.dispatchEvent(new Event('authChange'));
-                            navigate('/login', { replace: true });
-                        } else {
-                            const errorData = await response.json();
-                            throw new Error(errorData.message || 'Error al cerrar sesión');
-                        }
+
+                localStorage.removeItem('user');
+                setIsAuthenticated(false);
+                handleMenuClose();
+                window.dispatchEvent(new Event('authChange'));
+                navigate('/login', { replace: true });
                 
             } catch (error) {
-                console.error('Error durante el logout:', error);
-                alert('Ocurrió un error al cerrar sesión. Por favor, inténtalo nuevamente.');
+                localStorage.removeItem('user');
+                setIsAuthenticated(false);
+                navigate('/login', { replace: true });
             }
         }
     };

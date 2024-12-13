@@ -63,11 +63,15 @@ import { createAccessToken } from "../libs/jwt.js";
         }
     };
 
-    export const logout = (req, res) => {
-        res.cookie("token", "", {
-            expires: new Date(0)
+    export const logout = async (req, res) => {
+        res.cookie('token', '', {
+            expires: new Date(0),
+            httpOnly: true,
+            sameSite: 'none',
+            secure: true,
+            path: '/'
         });
-        return res.status(200).json({ redirectTo: '/inicio' });
+        return res.sendStatus(200);
     };
     
 
