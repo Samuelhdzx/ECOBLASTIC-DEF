@@ -44,7 +44,12 @@ import { createAccessToken } from "../libs/jwt.js";
             if (!isMatch) return res.status(400).json({ message: "Incorrect password" });
 
             const token = await createAccessToken({ id: userFound._id });
-            res.cookie("token", token);
+            res.cookie("token", token,{
+                httpOnly: true,
+                sameSite: 'none',
+                secure: true,
+                domain: '.onrender.com'
+            });
             res.json ({
                 id: userFound._id,
                 username: userFound.username,
