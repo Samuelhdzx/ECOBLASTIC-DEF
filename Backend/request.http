@@ -1,5 +1,5 @@
 ###
-POST http://localhost:1337/api/data_sensors HTTP/1.1
+POST https://ecoblastic-back.onrender.com/api/data_sensors HTTP/1.1
 Content-Type: application/json
 
 {
@@ -26,13 +26,13 @@ Content-Type: application/json
 }
 
 ### 
-GET http://localhost:1337/api/data_sensors HTTP/1.1
+GET https://ecoblastic-back.onrender.com/api/data_sensors HTTP/1.1
 
 ###
-GET http://localhost:1337/api/data_sensors/6713907efc842237b4e3eb9e HTTP/1.1
+GET https://ecoblastic-back.onrender.com/api/data_sensors/6713907efc842237b4e3eb9e HTTP/1.1
 
 ###
-PUT http://localhost:1337/api/data_sensors/671391a4a76bba257461a1a5 HTTP/1.1
+PUT https://ecoblastic-back.onrender.com/api/data_sensors/671391a4a76bba257461a1a5 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -42,5 +42,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:1337/api/data_sensors/6713907efc842237b4e3eb9e HTTP/1.1
+DELETE https://ecoblastic-back.onrender.com/api/data_sensors/6713907efc842237b4e3eb9e HTTP/1.1
 # CXV4MMOCMYMM45FM
