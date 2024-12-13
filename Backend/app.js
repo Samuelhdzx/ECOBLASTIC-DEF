@@ -16,13 +16,11 @@ app.use(morgan("dev"));
 app.use(bodyParser.json());
 app.use(cors({
     origin: [
-    'https://ecoblastic-back.onrender.com',
-    'http://localhost:5173',
-    'http://localhost:3000',
+    'https://ecoblastic.onrender.com'
     ],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization', 'Origin', 'Accept']
 }));app.use(helmet());
 app.use(cookieParser());
 app.use('/api', data_sensorsRoutes);

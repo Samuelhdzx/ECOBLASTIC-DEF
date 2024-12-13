@@ -48,7 +48,7 @@ import { createAccessToken } from "../libs/jwt.js";
                 httpOnly: true,
                 sameSite: 'none',
                 secure: true,
-                domain: '.onrender.com'
+                path: '/'
             });
             res.json ({
                 id: userFound._id,

@@ -5,11 +5,8 @@ export const api = createApi({
     baseUrl: 'https://ecoblastic-back.onrender.com',
     credentials: 'include',
     prepareHeaders: (headers) => {
-      const token = localStorage.getItem('token');
-      if (token) {
-        headers.set('authorization', `Bearer ${token}`);
-      }
-      return headers;
+      headers.set('Content-Type', 'application/json');
+        return headers;
     }
   }),
   tagTypes: ['SensorData', 'Users'],
