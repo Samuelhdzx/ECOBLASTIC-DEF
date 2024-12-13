@@ -15,7 +15,11 @@ import { createAccessToken } from "../libs/jwt.js";
 
             const userSaved = await newUser.save();
             const token = await createAccessToken({ id: userSaved._id });
-            res.cookie("token", token);
+            res.cookie("token", token,{
+                sameSite: 'none',
+                secure: true,
+                domain: '.onrender.com'
+            });
             res.json ({
                 id: userSaved._id,
                 username: userSaved.username,
